@@ -6,8 +6,7 @@ repos:
       - id: terraform_wrapper_module_for_each
       - id: terraform_validate
       - id: terraform_docs
-        args:
-          - '--args=--lockfile=false'
+        args: [markdown, table, --args=--output-file=README.md, '.', --args=--lockfile=false]
       - id: terraform_tflint
         args:
           - '--args=--only=terraform_deprecated_interpolation'
