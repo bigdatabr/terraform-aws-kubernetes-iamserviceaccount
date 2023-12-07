@@ -51,6 +51,7 @@ resource "kubernetes_annotations" "link_role_to_service_account" {
 ############################################
 resource "aws_iam_role" "this" {
   name = var.role_name
+  max_session_duration = 3600 * 12
   assume_role_policy = jsonencode(
     {
       Version = "2012-10-17"
